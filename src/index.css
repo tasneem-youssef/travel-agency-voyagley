@@ -1,0 +1,382 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 3000px;
+}
+:root {
+  --usedBorder: 12px;
+  --space-btw-elements: 150px;
+  --lagoon: #4c9999;
+  --happy-cement: #90a29a;
+  --highlands: #388e8e;
+  --hipster-hippo: #bbb5ab;
+  --silverBrich: #d2cec5;
+  --turkishJade: #278689;
+}
+h1,
+h2 {
+  text-transform: capitalize;
+  text-align: center;
+  cursor: default;
+}
+
+/*navbar*/
+.Header {
+  position: fixed;
+  z-index: 100;
+  padding: 15px 40px;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(4px) saturate(200%);
+  -webkit-backdrop-filter: blur(4px) saturate(200%);
+  background-color: rgba(97, 96, 96, 0.3);
+  border-radius: 0 0 12px 12px;
+}
+
+.zain-black {
+  font-family: "Zain", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 3rem;
+  text-decoration: none;
+  color: white;
+}
+
+.navitems-container div {
+  display: flex;
+  width: fit-content;
+  gap: 20px;
+  height: fit-content;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.burgerMenu {
+  color: white !important;
+  font-size: 2rem !important;
+}
+.burgerMenu:hover {
+  background-color: transparent !important;
+}
+
+.css-1r2bn3-JoySvgIcon-root {
+  color: white !important;
+  font-size: 1.5rem !important;
+}
+.css-16k4q1o-JoyDrawer-content {
+  background-color: #278489 !important;
+}
+#drawer {
+  flex-grow: 0 !important;
+  height: fit-content !important;
+  padding: 40px 0;
+  gap: 15px !important ;
+  margin-top: 150px;
+}
+.DrawerItem {
+  width: fit-content;
+  margin: auto !important;
+}
+.DrawerItem:hover {
+  background-color: transparent !important;
+}
+.navitem {
+  color: white !important;
+  text-decoration: none !important;
+  font-size: 1.2rem !important;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+.navitem::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+.navitem:hover::before {
+  width: 100%;
+}
+
+.hide {
+  display: none !important;
+}
+/*home*/
+.Home video {
+  width: 100%;
+  height: 85vh;
+  object-fit: cover;
+}
+.home-text {
+  position: absolute;
+  top: 25vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+.boldonse-regular {
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3em;
+  cursor: default;
+}
+/*select trip*/
+.trip-selector {
+  position: absolute !important;
+  max-width: 80vw;
+  width: fit-content;
+  padding: 20px;
+  height: fit-content;
+  padding: 1rem;
+  top: 60vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex !important;
+  align-items: end;
+  flex-wrap: wrap !important;
+  gap: 2rem;
+  justify-content: center;
+  backdrop-filter: blur(4px) saturate(200%);
+  -webkit-backdrop-filter: blur(4px) saturate(200%);
+  background-color: rgba(97, 96, 96, 0.3);
+  border-radius: var(--usedBorder);
+}
+
+.inputHolder {
+  height: 100%;
+}
+
+.Inupt {
+  height: 75% !important;
+  width: 10rem !important;
+  background-color: transparent !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-size: 1.1rem !important;
+}
+.css-1gw9vc6-JoyInput-input[type="text"] {
+  cursor: pointer !important;
+}
+#search-btn {
+  font-size: 1.1rem !important;
+  height: 100%;
+  padding: 0 1.5rem;
+  background-color: #278489 !important;
+  color: white !important;
+  border-radius: var(--usedBorder) !important;
+  font-weight: 400 !important;
+}
+/*top destinations*/
+.topDestinations {
+  margin: auto;
+  margin-top: var(--space-btw-elements);
+  height: fit-content;
+}
+.component-title {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.component-title::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background-color: #278489;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  border-radius: var(--usedBorder);
+}
+.destinations-container {
+  height: inherit;
+  width: 65%;
+  position: relative;
+  margin: auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.destination-item {
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--usedBorder);
+  transition: all 0.3s ease-in-out;
+  background-repeat: no-repeat;
+  min-height: 15rem;
+  position: relative;
+}
+.destination-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 1px 15px -3px rgba(0,0,0,0.6);
+}
+
+.destination-item::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height:0 ;
+  backdrop-filter: blur(4px) saturate(200%);
+  -webkit-backdrop-filter: blur(4px) saturate(200%);
+  background-color: rgba(97, 96, 96, 0.3);
+  bottom: 0;
+  left: 0;
+  border-radius: var(--usedBorder);
+  transition: all 0.3s ease-in-out;
+}
+.destination-item:hover::before{
+  height: 100%;
+}
+
+.des1 {
+  background-image: url("../src/images/britain.jpg");
+  @media (min-width: 992px) {
+    grid-column: span 2 / span 2;
+  }
+}
+.des2 {
+  background-image: url("../src/images/france.jpg");
+  @media (min-width: 992px) {
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+  }
+}
+.des3 {
+  background-image: url("../src/images/greece.jpg");
+  @media (min-width: 922px) {
+    grid-row-start: 2;
+  }
+}
+
+.des4 {
+  background-image: url("../src/images/india.jpg");
+  @media (min-width: 922px) {
+    grid-row-start: 2;
+  }
+}
+.des5 {
+  background-image: url("../src/images/italy.jpg");
+  @media (min-width: 992px) {
+    grid-row-start: 2;
+  }
+}
+.des6 {
+  background-image: url("../src/images/turkey.jpg");
+  @media (min-width: 992px) {
+    grid-row-start: 2;
+  }
+}
+.desItem-title{
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  color: white;
+  font-size: 1.75rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  cursor: default;
+}
+.desItem-title::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: white;
+  left: 0;
+  bottom: -5px;
+  border-radius: var(--usedBorder);
+}
+.desItem-list{
+  cursor: default;
+  position: absolute;
+  top: 70px;
+  left: -7px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  list-style: none;
+  display: none;
+  transition: all 3s ease-in-out;
+}
+.destination-item:hover .desItem-list{
+  display: block;
+}
+.desItem-list li:hover{
+  color:#065053;
+}
+/*trending*/
+.trending{
+  margin-top: var(--space-btw-elements);
+  position: relative;
+}
+.tabs-holder{
+  width: 65%;
+  margin: auto;
+  background-color: transparent !important;
+}
+.TabList{
+  margin: auto !important;
+  display: flex ;
+  width: 80%;
+  justify-content: space-between;
+}
+.tabPanel{
+  width: 100% ;
+  position: relative;
+  height: 3000px;
+background-color: transparent !important;
+}
+/*trips component*/
+.tripsTabs{
+  gap: 5px;
+  row-gap: 15px;
+ display: flex;
+ justify-content: space-around;
+ flex-wrap: wrap;
+}
+
+/*media queries*/
+@media (max-width: 992px) {
+  .destinations-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .Home video {
+    height: 100vh;
+  }
+  .zain-black {
+    font-size: 2.5rem !important;
+  }
+  .boldonse-regular {
+    font-size: 1.75em !important;
+    line-height: 40px;
+  }
+  .destination-item:hover {
+    transform: none;
+  }
+}
+@media (max-width: 576px) {
+  .home-text {
+    top: 22vh;
+  }
+  .destinations-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+}
