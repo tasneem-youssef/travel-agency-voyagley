@@ -12,7 +12,7 @@ import Destinations from "./pages/destinations.jsx";
 const App = () => {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/TravelAgency">
         <Header />
         <BackToTop />
         <Routes>
