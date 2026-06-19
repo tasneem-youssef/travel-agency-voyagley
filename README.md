@@ -2,9 +2,13 @@
 
 A modern, responsive travel agency web application built with **React** and **Vite**. Voyagley helps users explore trips, hotels, activities, and destinations in a seamless and visually rich experience.
 
-🌐 **Live Demo:** [voyagley on GitHub Pages](https://tasneem-youssef.github.io/travel-agency-voyagley/)
-
 ---
+
+## Screenshot
+<a href="https://tasneem-youssef.github.io/travel-agency-voyagley/">
+<img src="./src/images/mock image poster.png" alt="voyagley" />
+</a>
+
 
 ## 📸 Features
 
@@ -33,6 +37,57 @@ A modern, responsive travel agency web application built with **React** and **Vi
 
 ---
 
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/tasneem-youssef/TravelAgency-copy.git
+   cd TravelAgency-copy
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser** and navigate to `http://localhost:5173`
+
+
+---
+## 🔗 Routes
+
+| Path | Page |
+|---|---|
+| `/` | Home |
+| `/trips` | Trips listing |
+| `/hotels` | Hotels listing |
+| `/activities` | Activities listing |
+| `/destinations` | Destinations listing |
+| `/login` | Login (placeholder) |
+| `/signup` | Sign up (placeholder) |
+| `/contact` | Contact (placeholder) |
+| `*` | 404 Not Found |
+
+---
+
+## 📦 Available Scripts
+
+| Script | Description |
+|---|---|
+| `npm run dev` | Start the local development server |
+| `npm run build` | Build the app for production |
+| `npm run preview` | Preview the production build locally |
+| `npm run deploy` | Deploy to GitHub Pages |
+
+---
 ## 📁 Project Structure
 
 ```
@@ -71,51 +126,6 @@ TravelAgency-copy/
 └── package.json
 ```
 
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) v16 or higher
-- npm v8 or higher
-
-### Installation
-
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/tasneem-youssef/TravelAgency-copy.git
-   cd TravelAgency-copy
-   ```
-
-2. **Install dependencies:**
-
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server:**
-
-   ```bash
-   npm run dev
-   ```
-
-4. **Open your browser** and navigate to `http://localhost:5173`
-
----
-
-## 📦 Available Scripts
-
-| Script | Description |
-|---|---|
-| `npm run dev` | Start the local development server |
-| `npm run build` | Build the app for production |
-| `npm run preview` | Preview the production build locally |
-| `npm run deploy` | Deploy to GitHub Pages |
-
----
-
 ## 🌍 Deployment
 
 This project is configured for deployment to **GitHub Pages**.
@@ -129,38 +139,10 @@ This runs `npm run build` (via `predeploy`) and then pushes the `dist/` folder t
 The `base` path is set to `/travel-agency-voyagley/` in `vite.config.js`.
 
 ---
-
-## 🔗 Routes
-
-| Path | Page |
-|---|---|
-| `/` | Home |
-| `/trips` | Trips listing |
-| `/hotels` | Hotels listing |
-| `/activities` | Activities listing |
-| `/destinations` | Destinations listing |
-| `/login` | Login (placeholder) |
-| `/signup` | Sign up (placeholder) |
-| `/contact` | Contact (placeholder) |
-| `*` | 404 Not Found |
+🌐 **Live Demo:** [voyagley on GitHub Pages](https://tasneem-youssef.github.io/travel-agency-voyagley/)
 
 ---
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to open an issue or submit a pull request.
-
-1. Fork the repository
-2. Create a new branch: `git checkout -b feature/your-feature-name`
-3. Commit your changes: `git commit -m "Add your feature"`
-4. Push to the branch: `git push origin feature/your-feature-name`
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
+## Contact
+- **Email**: tasneemyoussef61@gmail.com
+- **LinkedIn**: <a href="https://www.linkedin.com/in/tasneem-youssef-react" target="_blank">Link</a>
 
