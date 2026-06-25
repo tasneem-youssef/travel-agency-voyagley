@@ -959,7 +959,325 @@ h2 {
   box-shadow: 0 0 0 0.25rem rgba(39, 134, 137, 0.25) !important;
 }
 
-/*media queries*/
+/* Sub-page hero header */
+.sub-page-header {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.sub-header-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.sub-header-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.6) 100%);
+}
+
+.sub-header-content {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+}
+
+.sub-header-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.sub-header-subtitle {
+  font-size: 1.1rem;
+  margin-top: 8px;
+  color: var(--silverBrich);
+  letter-spacing: 1px;
+}
+
+/* ============================================
+   TRIP DETAIL CONTENT
+   ============================================ */
+
+.trip-detail-section {
+  max-width: 1200px;
+  width: 92%;
+  margin: 60px auto 100px;
+}
+
+/* Breadcrumb */
+.trip-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 40px;
+  font-size: 0.9rem;
+}
+
+.trip-bc-link {
+  color: var(--turkishJade);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.trip-bc-link:hover {
+  opacity: 0.75;
+}
+
+.trip-bc-sep {
+  color: var(--happy-cement);
+}
+
+.trip-bc-current {
+  color: #555;
+  font-weight: 500;
+}
+
+/* Two-column grid */
+.trip-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 48px;
+  align-items: start;
+}
+
+/* LEFT column */
+.trip-eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--turkishJade);
+  background: rgba(39, 134, 137, 0.1);
+  padding: 5px 16px;
+  border-radius: 50px;
+  margin-bottom: 14px;
+}
+
+.trip-detail-heading {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  color: #1a2e2e;
+  text-align: left;
+  margin-bottom: 36px;
+  text-transform: capitalize;
+  cursor: default;
+}
+
+.trip-history-block,
+.trip-highlights-block {
+  margin-bottom: 36px;
+}
+
+.trip-block-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a2e2e;
+  text-transform: capitalize;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(39, 134, 137, 0.18);
+  text-align: left;
+  cursor: default;
+}
+
+.trip-history-text {
+  font-size: 0.97rem;
+  line-height: 1.85;
+  color: #4a5e5e;
+  cursor: default;
+}
+
+.trip-highlights-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.trip-highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.96rem;
+  color: #3a5050;
+  line-height: 1.6;
+}
+
+.trip-highlight-dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--turkishJade), var(--lagoon));
+  margin-top: 6px;
+}
+
+/* RIGHT column — sticky info card */
+.trip-detail-sidebar {
+  position: sticky;
+  top: 90px;
+}
+
+.trip-info-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px 28px 28px;
+  box-shadow: 0 8px 40px rgba(39, 134, 137, 0.12), 0 2px 8px rgba(0,0,0,0.05);
+  border: 1.5px solid rgba(39, 134, 137, 0.12);
+}
+
+.trip-info-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 4px 0;
+}
+
+.trip-info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(39, 134, 137, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--turkishJade);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.trip-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.trip-info-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--happy-cement);
+}
+
+.trip-info-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a2e2e;
+}
+
+.trip-info-divider {
+  height: 1px;
+  background: rgba(39, 134, 137, 0.1);
+  margin: 10px 0;
+}
+
+/* Spots / urgency */
+.trip-spots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.trip-spots-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  background: #fff3cd;
+  color: #856404;
+  padding: 2px 8px;
+  border-radius: 20px;
+  border: 1px solid #ffc107;
+  letter-spacing: 0.5px;
+}
+
+/* Price block */
+.trip-price-block {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding: 18px 20px;
+  background: linear-gradient(135deg, rgba(39, 134, 137, 0.06), rgba(76, 153, 153, 0.04));
+  border-radius: 14px;
+  border: 1px solid rgba(39, 134, 137, 0.14);
+}
+
+.trip-price-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--happy-cement);
+}
+
+.trip-price-value {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--turkishJade);
+}
+
+/* Reservation button */
+.trip-reserve-btn {
+  width: 100%;
+  margin-top: 16px;
+  padding: 16px;
+  background: linear-gradient(135deg, var(--turkishJade), var(--lagoon));
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  text-transform: capitalize;
+}
+
+.trip-reserve-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(39, 134, 137, 0.35);
+  opacity: 0.92;
+}
+
+.trip-reserve-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.trip-reserve-note {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--happy-cement);
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+/* Responsive — stack on tablet */
+@media (max-width: 900px) {
+  .trip-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trip-detail-sidebar {
+    position: static;
+  }
+}
+
+
 @media (max-width: 992px) {
   .cards-container {
     grid-template-columns: repeat(2, 1fr);

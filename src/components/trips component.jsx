@@ -4,7 +4,7 @@ import Card from "@mui/joy/Card";
 import CardCover from "@mui/joy/CardCover";
 import IconButton from "@mui/joy/IconButton";
 import Typography from "@mui/joy/Typography";
-import Link from "@mui/joy/Link";
+import { useNavigate } from 'react-router-dom'
 import LoveButton from "./LoveButton";
 import Rome from "../images/rome.jpg";
 import milan from "../images/milan.jpg";
@@ -14,21 +14,26 @@ import Athens from "../images/athens.jpg";
 import paris from "../images/paris.jpg";
 import TAJMAHAL from "../images/Taj Mahal.jpg";
 import HagiaSophia from "../images/Hagia Sophia .webp"
+
 const TripsTab = () => {
+  const navigate = useNavigate()
   return (
     <div>
       <div className="tripsTabs">
         <Card
+          onClick={() => { navigate('/trips/trip1') }}
           className="Card"
           variant="plain"
           sx={{ width: "18em", bgcolor: "initial", p: 0, borderRadius: "12px" }}
         >
           <Box sx={{ position: "relative" }}>
+
             <AspectRatio ratio="4/3">
               <figure>
                 <img src={Rome} loading="lazy" alt="Terrazza del Pincio" />
               </figure>
             </AspectRatio>
+
             <CardCover
               className="gradient-cover"
               sx={{
@@ -52,19 +57,14 @@ const TripsTab = () => {
                     alignSelf: "flex-end",
                   }}
                 >
-                  <Typography level="h2" sx={{ fontSize: "lg" }}>
-                    <Link
-                      overlay
-                      underline="none"
-                      sx={{
-                        color: "#fff",
-                        textOverflow: "ellipsis",
-                        overflow: "hidden",
-                        display: "block",
-                      }}
-                    >
-                      Villa Borghese
-                    </Link>
+                  <Typography level="h2" sx={{
+                    fontSize: "lg",
+                    color: "#fff",
+                    textOverflow: "ellipsis",
+                    overflow: "hidden",
+                    display: "block",
+                  }}>
+                    Villa Borghese
                   </Typography>
                   <span style={{ color: "white" }}>Rome</span>
                   <LoveButton />
@@ -73,8 +73,10 @@ const TripsTab = () => {
             </CardCover>
           </Box>
         </Card>
+        {/*Rome*/}
 
         <Card
+          onClick={() => { navigate('/trips/trip2') }}
           className="Card"
           variant="plain"
           sx={{ width: "18rem", bgcolor: "initial", p: 0, borderRadius: "12px" }}
@@ -112,19 +114,15 @@ const TripsTab = () => {
                     alignSelf: "flex-end",
                   }}
                 >
-                  <Typography level="h2" sx={{ fontSize: "lg" }}>
-                    <Link
-                      overlay
-                      underline="none"
-                      sx={{
-                        color: "#fff",
-                        textOverflow: "ellipsis",
-                        overflow: "hidden",
-                        display: "block",
-                      }}
-                    >
-                      Parthenon
-                    </Link>
+                  <Typography level="h2" sx={{
+                    fontSize: "lg",
+                    color: "#fff",
+                    textOverflow: "ellipsis",
+                    overflow: "hidden",
+                    display: "block",
+                  }}>
+                    Parthenon
+
                   </Typography>
                   <span style={{ color: "white" }}>Athens</span>{" "}
                   <LoveButton />
@@ -133,8 +131,10 @@ const TripsTab = () => {
             </CardCover>
           </Box>
         </Card>
+        {/*Athens*/}
 
         <Card
+          onClick={() => { navigate('/trips/trip3') }}
           className="Card"
           variant="plain"
           sx={{ width: "18rem", bgcolor: "initial", p: 0, borderRadius: "12px" }}
@@ -172,19 +172,14 @@ const TripsTab = () => {
                     alignSelf: "flex-end",
                   }}
                 >
-                  <Typography level="h2" sx={{ fontSize: "lg" }}>
-                    <Link
-                      overlay
-                      underline="none"
-                      sx={{
-                        color: "#fff",
-                        textOverflow: "ellipsis",
-                        overflow: "hidden",
-                        display: "block",
-                      }}
-                    >
-                      Tower Bridge
-                    </Link>
+                  <Typography level="h2" sx={{
+                    fontSize: "lg",
+                    color: "#fff",
+                    textOverflow: "ellipsis",
+                    overflow: "hidden",
+                    display: "block",
+                  }}>
+                    Tower Bridge
                   </Typography>
                   <span style={{ color: "white" }}>London</span>
                   <LoveButton />
@@ -193,8 +188,10 @@ const TripsTab = () => {
             </CardCover>
           </Box>
         </Card>
+        {/*London*/}
 
         <Card
+          onClick={() => { navigate('/trips/trip4') }}
           className="Card"
           variant="plain"
           sx={{ width: "18rem", bgcolor: "initial", p: 0, borderRadius: "12px" }}
@@ -228,19 +225,16 @@ const TripsTab = () => {
                     alignSelf: "flex-end",
                   }}
                 >
-                  <Typography level="h2" sx={{ fontSize: "lg" }}>
-                    <Link
-                      overlay
-                      underline="none"
-                      sx={{
-                        color: "#fff",
-                        textOverflow: "ellipsis",
-                        overflow: "hidden",
-                        display: "block",
-                      }}
-                    >
-                      Milan Cathedral
-                    </Link>
+                  <Typography level="h2" sx={{
+                    fontSize: "lg",
+                    color: "#fff",
+                    textOverflow: "ellipsis",
+                    overflow: "hidden",
+                    display: "block",
+                  }}>
+
+                    Milan Cathedral
+
                   </Typography>
                   <span style={{ color: "white" }}>Milan</span>
                   <IconButton
@@ -259,8 +253,10 @@ const TripsTab = () => {
             </CardCover>
           </Box>
         </Card>
+        {/*Milan*/}
 
         <Card
+          onClick={() => { navigate('/trips/trip5') }}
           className="Card"
           variant="plain"
           sx={{ width: "18rem", bgcolor: "initial", p: 0, borderRadius: "12px" }}
@@ -298,19 +294,15 @@ const TripsTab = () => {
                     alignSelf: "flex-end",
                   }}
                 >
-                  <Typography level="h2" sx={{ fontSize: "lg" }}>
-                    <Link
-                      overlay
-                      underline="none"
-                      sx={{
-                        color: "#fff",
-                        textOverflow: "ellipsis",
-                        overflow: "hidden",
-                        display: "block",
-                      }}
-                    >
-                      Taj Mahal
-                    </Link>
+                  <Typography level="h2" sx={{
+                    fontSize: "lg",
+                    color: "#fff",
+                    textOverflow: "ellipsis",
+                    overflow: "hidden",
+                    display: "block",
+                  }}>
+                    Taj Mahal
+
                   </Typography>
                   <span style={{ color: "white" }}>Agara , India</span>
                   <LoveButton />
@@ -319,8 +311,10 @@ const TripsTab = () => {
             </CardCover>
           </Box>
         </Card>
+        {/*Taj Mahal*/}
 
         <Card
+          onClick={() => { navigate('/trips/trip6') }}
           className="Card"
           variant="plain"
           sx={{ width: "18rem", bgcolor: "initial", p: 0, borderRadius: "12px" }}
@@ -358,19 +352,14 @@ const TripsTab = () => {
                     alignSelf: "flex-end",
                   }}
                 >
-                  <Typography level="h2" sx={{ fontSize: "lg" }}>
-                    <Link
-                      overlay
-                      underline="none"
-                      sx={{
-                        color: "#fff",
-                        textOverflow: "ellipsis",
-                        overflow: "hidden",
-                        display: "block",
-                      }}
-                    >
-                      Royal Liver
-                    </Link>
+                  <Typography level="h2" sx={{
+                    fontSize: "lg",
+                    color: "#fff",
+                    textOverflow: "ellipsis",
+                    overflow: "hidden",
+                    display: "block",
+                  }}>
+                    Royal Liver
                   </Typography>
                   <span style={{ color: "white" }}>Liverpool</span>
                   <LoveButton />
@@ -379,8 +368,10 @@ const TripsTab = () => {
             </CardCover>
           </Box>
         </Card>
+        {/*liverpool*/}
 
         <Card
+          onClick={() => { navigate('/trips/trip7') }}
           className="Card"
           variant="plain"
           sx={{ width: "18rem", bgcolor: "initial", p: 0, borderRadius: "12px" }}
@@ -418,29 +409,26 @@ const TripsTab = () => {
                     alignSelf: "flex-end",
                   }}
                 >
-                  <Typography level="h2" sx={{ fontSize: "lg" }}>
-                    <Link
-                      overlay
-                      underline="none"
-                      sx={{
-                        color: "#fff",
-                        textOverflow: "ellipsis",
-                        overflow: "hidden",
-                        display: "block",
-                      }}
-                    >
-                      eiffel tower
-                    </Link>
+                  <Typography level="h2" sx={{
+                    fontSize: "lg",
+                    color: "#fff",
+                    textOverflow: "ellipsis",
+                    overflow: "hidden",
+                    display: "block",
+                  }}>
+                    Eiffel Tower
                   </Typography>
-                  <span style={{ color: "white" }}>paris</span>
+                  <span style={{ color: "white" }}>Paris</span>
                   <LoveButton />
                 </Box>
               </div>
             </CardCover>
           </Box>
         </Card>
+        {/*paris*/}
 
         <Card
+          onClick={() => { navigate('/trips/trip8') }}
           className="Card"
           variant="plain"
           sx={{ width: "18rem", bgcolor: "initial", p: 0, borderRadius: "12px" }}
@@ -478,19 +466,14 @@ const TripsTab = () => {
                     alignSelf: "flex-end",
                   }}
                 >
-                  <Typography level="h2" sx={{ fontSize: "lg" }}>
-                    <Link
-                      overlay
-                      underline="none"
-                      sx={{
-                        color: "#fff",
-                        textOverflow: "ellipsis",
-                        overflow: "hidden",
-                        display: "block",
-                      }}
-                    >
-                      Hagia Sophia
-                    </Link>
+                  <Typography level="h2" sx={{
+                    fontSize: "lg",
+                    color: "#fff",
+                    textOverflow: "ellipsis",
+                    overflow: "hidden",
+                    display: "block",
+                  }}>
+                    Hagia Sophia
                   </Typography>
                   <span style={{ color: "white" }}>Istanbul</span>
                   <LoveButton />
@@ -499,8 +482,9 @@ const TripsTab = () => {
             </CardCover>
           </Box>
         </Card>
+        {/*Istanbul*/}
       </div>
-      <Link className="pageLink" href="/trips">show more...</Link>
+      <a className="pageLink" href="/trips">show more...</a>
     </div>
   );
 };

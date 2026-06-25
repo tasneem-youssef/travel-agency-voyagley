@@ -8,6 +8,7 @@ import Trips from "./pages/trips.jsx";
 import Hotels from "./pages/hotels.jsx";
 import Activities from "./pages/activities.jsx";
 import Destinations from "./pages/destinations.jsx";
+import TripsLayout from "./components/TripsLayout.jsx";
 
 const App = () => {
   return (
@@ -17,14 +18,10 @@ const App = () => {
         <BackToTop />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/trips" element={<Trips />} >
-            <Route path="trip1" />
-            <Route path="trip2" />
-            <Route path="trip3" />
-            <Route path="trip4" />
-            <Route path="trip5" />
-            <Route path="trip6" />
-          </Route>
+          {/* trips page and its subroutes */}
+          <Route path="/trips" element={<Trips />} />
+          <Route path="trips/:tripId" element={<TripsLayout />} />
+          {/*hotels page and its subroutes*/}
           <Route path="/hotels" element={<Hotels />} >
             <Route path="hotel1" />
             <Route path="hotel2" />
@@ -33,6 +30,7 @@ const App = () => {
             <Route path="hotel5" />
             <Route path="hotel6" />
           </Route>
+          {/*activities page and its subroutes*/}
           <Route path="/activities" element={<Activities />} >
             <Route path="activity1" />
             <Route path="activity2" />
@@ -41,8 +39,11 @@ const App = () => {
             <Route path="activity5" />
             <Route path="activity6" />
           </Route>
+          {/* login page*/}
           <Route path="/login" />
+          {/* signup page*/}
           <Route path="/signup" />
+          {/*destinations page and its subroutes*/}
           <Route path="/destinations" element={<Destinations />} >
             <Route path="destination1" />
             <Route path="destination2" />
@@ -51,7 +52,9 @@ const App = () => {
             <Route path="destination5" />
             <Route path="destination6" />
           </Route>
+          {/*contact page*/}
           <Route path="/contact" />
+          {/*not found page*/}
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
