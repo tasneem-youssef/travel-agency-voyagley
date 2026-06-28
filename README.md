@@ -61,16 +61,19 @@ A modern, responsive travel agency web application built with **React** and **Vi
 4. **Open your browser** and navigate to `http://localhost:5173`
 
 
----
 ## 🔗 Routes
 
 | Path | Page |
 |---|---|
 | `/` | Home |
 | `/trips` | Trips listing |
+| `/trips/:tripId` | Trip detail page |
 | `/hotels` | Hotels listing |
+| `/hotels/:hotelId` | Hotel detail page |
 | `/activities` | Activities listing |
+| `/activities/:activityId` | Activity detail page |
 | `/destinations` | Destinations listing |
+| `/destinations/:destinationId` | Destination detail page |
 | `/login` | Login (placeholder) |
 | `/signup` | Sign up (placeholder) |
 | `/contact` | Contact (placeholder) |
@@ -94,33 +97,46 @@ A modern, responsive travel agency web application built with **React** and **Vi
 TravelAgency-copy/
 ├── public/
 ├── src/
-│   ├── components/         # Reusable UI components
+│   ├── components/
+│   │   ├── trips/                    # Trip-related components
+│   │   │   ├── TripsLayout.jsx       # Detail layout (uses :tripId param)
+│   │   │   ├── TripsTab.jsx          # Trips card grid (home trending tab)
+│   │   │   └── TripDetailContent.jsx # Trip detail info panel
+│   │   ├── hotels/                   # Hotel-related components
+│   │   │   ├── HotelsLayout.jsx      # Detail layout (uses :hotelId param)
+│   │   │   ├── HotelsTab.jsx         # Hotels card grid (home trending tab)
+│   │   │   └── HotelDetailContent.jsx
+│   │   ├── activities/               # Activity-related components
+│   │   │   ├── ActivitiesLayout.jsx  # Detail layout (uses :activityId param)
+│   │   │   ├── ActivitiesTab.jsx     # Activities card grid (home trending tab)
+│   │   │   └── ActivityDetailContent.jsx
+│   │   ├── destinations/             # Destination-related components
+│   │   │   ├── DestinationsLayout.jsx # Detail layout (uses :destinationId param)
+│   │   │   ├── TopDestinations.jsx   # Destination grid (home section)
+│   │   │   └── DestinationDetailContent.jsx
 │   │   ├── header.jsx
 │   │   ├── footer.jsx
 │   │   ├── slider.jsx
 │   │   ├── Trending.jsx
-│   │   ├── TopDestinations.jsx
 │   │   ├── TopDeals.jsx
 │   │   ├── WhyUs.jsx
 │   │   ├── LoveButton.jsx
 │   │   ├── backToTop.jsx
-│   │   ├── tripSelector.jsx
-│   │   ├── trips component.jsx
-│   │   ├── Hotels component.jsx
-│   │   └── Activies component.jsx
-│   ├── pages/              # Route-level page components
+│   │   ├── subPageHeader.jsx
+│   │   └── tripSelector.jsx
+│   ├── pages/                        # Route-level page components
 │   │   ├── home.jsx
 │   │   ├── trips.jsx
 │   │   ├── hotels.jsx
 │   │   ├── activities.jsx
 │   │   ├── destinations.jsx
 │   │   └── NotFound.jsx
-│   ├── utils/              # Utility files
-│   │   └── basURL.js       # Base API URL configuration
-│   ├── images/             # Static image assets
-│   ├── App.jsx             # Root component with routing
-│   ├── index.jsx           # App entry point
-│   └── index.css           # Global styles
+│   ├── utils/                        # Utility files
+│   │   └── basURL.js
+│   ├── images/                       # Static image assets
+│   ├── App.jsx                       # Root component with routing
+│   ├── index.jsx                     # App entry point
+│   └── index.css                     # Global styles
 ├── index.html
 ├── vite.config.js
 └── package.json
