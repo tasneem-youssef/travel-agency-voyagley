@@ -2,10 +2,10 @@ import Tabs from "@mui/joy/Tabs";
 import TabList from "@mui/joy/TabList";
 import Tab from "@mui/joy/Tab";
 import TabPanel from "@mui/joy/TabPanel";
-import TripsTab from "./trips component";
+import TripsTab from "./trips/TripsTab";
 import { useEffect, useState } from "react";
-import HotelsTab from "./Hotels component";
-import ActivitesTab from "./Activies component";
+import HotelsTab from "./hotels/HotelsTab";
+import ActivitesTab from "./activities/ActivitiesTab";
 const Trending = () => {
   const [activeTab, setActiveTab] = useState(0);
 

@@ -1,4 +1,4 @@
-import TopDestinations from "../components/TopDestinations";
+import TopDestinations from "../components/destinations/TopDestinations";
 import Trending from "../components/Trending";
 import TripSelector from "../components/tripSelector";
 import video1 from "../images/vedio1.mp4";
