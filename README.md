@@ -17,7 +17,6 @@ A modern, responsive travel agency web application built with **React** and **Vi
 - 🏨 **Hotels** — Discover curated hotel listings
 - 🎯 **Activities** — Find exciting activities at each destination
 - 📍 **Destinations** — Explore top travel destinations
-- ❤️ **Favorites** — Save trips, hotels, and activities with a love button
 - 🔝 **Back to Top** — Smooth scroll-to-top button for better navigation
 - 📱 **Fully Responsive** — Optimized for all screen sizes
 
