@@ -1375,3 +1375,116 @@ h2 {
     padding: 32px 12px;
   }
 }
+
+/* Trips Page Grid Layout */
+.trips-page-container {
+  background-color: #f7f9f9;
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+.trips-grid-wrapper {
+  max-width: 1200px;
+  margin: 50px auto 0;
+  padding: 0 20px;
+}
+
+.trips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.trip-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.trip-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(39, 134, 137, 0.15);
+}
+
+.trip-card-image-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 66.67%; /* 3:2 Aspect Ratio */
+  overflow: hidden;
+}
+
+.trip-card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.trip-card:hover .trip-card-image {
+  transform: scale(1.08);
+}
+
+.trip-card-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.trip-card-subtitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--happy-cement);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.trip-card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a2e2e;
+  margin-bottom: 20px;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.trip-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.trip-card-price {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--turkishJade);
+}
+
+.trip-card-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--turkishJade);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.trip-card-link:hover {
+  background-color: var(--highlands);
+  transform: translateY(-1px);
+}

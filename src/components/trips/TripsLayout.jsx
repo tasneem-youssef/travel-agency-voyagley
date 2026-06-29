@@ -10,7 +10,7 @@ import SubPageHeader from "../subPageHeader.jsx";
 import TripDetailContent from "./TripDetailContent";
 import { useParams } from "react-router-dom";
 
-const TripsData = {
+export const TripsData = {
     trip1: {
         image: Rome,
         title: "Villa Borghese",

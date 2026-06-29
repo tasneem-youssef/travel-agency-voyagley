@@ -2,7 +2,6 @@ import AspectRatio from "@mui/joy/AspectRatio";
 import Box from "@mui/joy/Box";
 import Card from "@mui/joy/Card";
 import CardCover from "@mui/joy/CardCover";
-import IconButton from "@mui/joy/IconButton";
 import Typography from "@mui/joy/Typography";
 import Link from "@mui/joy/Link";
 import LoveButton from "../LoveButton";

@@ -64,27 +64,39 @@ const Header = () => {
 
           <List id="drawer" size="lg" component="nav">
             <ListItemButton className="DrawerItem" sx={{ fontWeight: "lg" }}>
-              <a href="/" className="navitem">
+              <a href="/travel-agency-voyagley/" className="navitem">
                 Home
               </a>
             </ListItemButton>
             <ListItemButton className="DrawerItem">
-              <a href="/trips" className="navitem">
+              <a
+                href="/travel-agency-voyagley/trips"
+                className="navitem"
+              >
                 trips
               </a>
             </ListItemButton>
             <ListItemButton className="DrawerItem">
-              <a href="/destinations" className="navitem">
+              <a
+                href="/travel-agency-voyagley/destinations"
+                className="navitem"
+              >
                 destinations
               </a>
             </ListItemButton>
             <ListItemButton className="DrawerItem">
-              <a href="/hotels" className="navitem">
+              <a
+                href="/travel-agency-voyagley/hotels"
+                className="navitem"
+              >
                 Hotels
               </a>
             </ListItemButton>
             <ListItemButton className="DrawerItem">
-              <a href="/activities" className="navitem">
+              <a
+                href="/travel-agency-voyagley/activities"
+                className="navitem"
+              >
                 Activities
               </a>
             </ListItemButton>
@@ -98,20 +110,35 @@ const Header = () => {
         </Drawer>
 
         <div className={winwidth < 830 ? "hide" : ""}>
-          <Link href="/" className="navitem">
+          <Link
+            href="/travel-agency-voyagley/"
+            className="navitem"
+          >
             Home
           </Link>
 
-          <Link href="/trips" className="navitem">
+          <Link
+            href="/travel-agency-voyagley/trips"
+            className="navitem"
+          >
             trips
           </Link>
-          <Link href="/destinations" className="navitem">
+          <Link
+            href="/travel-agency-voyagley/destinations"
+            className="navitem"
+          >
             destinations
           </Link>
-          <Link href="#hotels" className="navitem">
+          <Link
+            href="/travel-agency-voyagley/hotels"
+            className="navitem"
+          >
             Hotels
           </Link>
-          <Link href="/activities" className="navitem">
+          <Link
+            href="/travel-agency-voyagley/activities"
+            className="navitem"
+          >
             Activities
           </Link>
           <Link href="#contact" className="navitem">
