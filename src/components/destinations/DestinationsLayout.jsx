@@ -8,7 +8,7 @@ import SubPageHeader from "../subPageHeader.jsx";
 import DestinationDetailContent from "./DestinationDetailContent.jsx";
 import { useParams } from "react-router-dom";
 
-const DestinationsData = {
+export const DestinationsData = {
     destination1: {
         image: britain,
         name: "United Kingdom",

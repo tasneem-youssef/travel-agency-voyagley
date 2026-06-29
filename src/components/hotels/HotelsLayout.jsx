@@ -8,7 +8,7 @@ import SubPageHeader from "../subPageHeader.jsx";
 import HotelDetailContent from "./HotelDetailContent.jsx";
 import { useParams } from "react-router-dom";
 
-const HotelsData = {
+export const HotelsData = {
     hotel1: {
         image: TheSavoy,
         name: "The Savoy",

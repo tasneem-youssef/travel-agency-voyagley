@@ -52,7 +52,7 @@ const TopDestinations = () => {
           </ul>
         </div>
       </div>
-      <Link className="pageLink" href="/destinations">show more...</Link>
+      <a className="pageLink" href="/travel-agency-voyagley/destinations">show more...</a>
     </div>
   );
 };

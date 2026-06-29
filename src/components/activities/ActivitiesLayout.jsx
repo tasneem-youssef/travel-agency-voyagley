@@ -8,7 +8,7 @@ import SubPageHeader from "../subPageHeader.jsx";
 import ActivityDetailContent from "./ActivityDetailContent.jsx";
 import { useParams } from "react-router-dom";
 
-const ActivitiesData = {
+export const ActivitiesData = {
     activity1: {
         image: fourdayTour,
         title: "4-Day Istanbul Tour",

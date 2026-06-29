@@ -1,13 +1,13 @@
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import notFound from "../images/Gemini_Generated_Image_5qwr8x5qwr8x5qwr.png";
 const NotFound = () => {
-    const nav=useNavigate()
+  const nav = useNavigate()
   return (
     <div className="notFound">
-      <img src={notFound} alt="" />
+      <img src={notFound} alt="404 iullstration" />
       <div id="notFoundConatiner">
         <span>page not found</span>
-        <button onClick={()=>nav("/")}>back to home page</button>
+        <button onClick={() => nav("/")}>back to home page</button>
       </div>
     </div>
   );

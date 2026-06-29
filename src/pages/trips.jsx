@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 import { TripsData } from "../components/trips/TripsLayout";
 import SubPageHeader from "../components/subPageHeader.jsx";
-import bannerImg from "../images/landescape1.jpg";
+import bannerImg from "../images/tripsHeader.jpg";
 
 const Trips = () => {
     return (
         <div className="trips-page-container">
-            <SubPageHeader 
-                imagePath={bannerImg} 
-                title="Our Trips" 
-                subtitle="Explore our curated collection of extraordinary journeys" 
+            <SubPageHeader
+                imagePath={bannerImg}
+                title="Our Trips"
+                subtitle="Explore our curated collection of extraordinary journeys"
             />
-            
+
             <div className="trips-grid-wrapper">
                 <div className="trips-grid">
                     {Object.values(TripsData).map((trip, i) => (
