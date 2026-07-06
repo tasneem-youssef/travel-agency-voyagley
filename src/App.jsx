@@ -9,9 +9,10 @@ import Hotels from "./pages/hotels.jsx";
 import Activities from "./pages/activities.jsx";
 import Destinations from "./pages/destinations.jsx";
 import TripsLayout from "./components/trips/TripsLayout.jsx";
-import HotelsLayout from "./components/hotels/HotelsLayout.jsx";
 import ActivitiesLayout from "./components/activities/ActivitiesLayout.jsx";
 import DestinationsLayout from "./components/destinations/DestinationsLayout.jsx";
+import Auth from "./pages/Auth/Auth.jsx";
+import HotelsLayout from "./components/hotels/hotelsLayout.jsx";
 
 const App = () => {
   return (
@@ -30,10 +31,8 @@ const App = () => {
           {/*activities page and its subroutes*/}
           <Route path="/activities" element={<Activities />} />
           <Route path="activities/:activityId" element={<ActivitiesLayout />} />
-          {/* login page*/}
-          <Route path="/login" />
-          {/* signup page*/}
-          <Route path="/signup" />
+          {/* login/signup page*/}
+          <Route path="/auth" element={<Auth />} />
           {/*destinations page and its subroutes*/}
           <Route path="/destinations" element={<Destinations />} />
           <Route path="destinations/:destinationId" element={<DestinationsLayout />} />
