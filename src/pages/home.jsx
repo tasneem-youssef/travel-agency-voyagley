@@ -10,8 +10,8 @@ import TopDeals from "../components/TopDeals.jsx";
 const Home = () => {
   return (
     <div className="Home">
-      <video autoPlay loop muted className="home-video">
-        <source src={video1} />
+      <video autoPlay loop muted preload="metadata" className="home-video">
+        <source src={video1} type="video/mp4" />
       </video>
       <div className="home-text">
         <h1 className="boldonse-regular">Adventure starts here</h1>
@@ -21,7 +21,7 @@ const Home = () => {
       <Trending />
       <BackToTop />
       <div className="break">
-        <img src={Break} />
+        <img src={Break} loading="lazy" alt="Break Wallpaper" />
         <div className="herodiv">
           <h3>quick info</h3>
           <span>

@@ -17,7 +17,7 @@ const Activities = () => {
                     {Object.values(ActivitiesData).map((activity, i) => (
                         <div className="trip-card" key={i}>
                             <div className="trip-card-image-wrapper">
-                                <img src={activity.image} alt={activity.title} className="trip-card-image" />
+                                <img src={activity.image} alt={activity.title} className="trip-card-image" loading="lazy" />
                             </div>
                             <div className="trip-card-content">
                                 <h3 className="trip-card-title">{activity.title}</h3>

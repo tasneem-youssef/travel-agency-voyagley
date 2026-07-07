@@ -17,7 +17,7 @@ const Destinations = () => {
                     {Object.values(DestinationsData).map((destination, i) => (
                         <div className="trip-card" key={i}>
                             <div className="trip-card-image-wrapper">
-                                <img src={destination.image} alt={destination.name} className="trip-card-image" />
+                                <img src={destination.image} alt={destination.name} className="trip-card-image" loading="lazy" />
                             </div>
                             <div className="trip-card-content">
                                 <span className="trip-card-subtitle">{destination.region}</span>

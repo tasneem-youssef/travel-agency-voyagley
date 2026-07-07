@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { HotelsData } from "../components/hotels/HotelsLayout";
 import SubPageHeader from "../components/subPageHeader.jsx";
 import bannerImg from "../images/hotelsHeader.jpg";
+import { HotelsData } from "../components/hotels/hotelsLayout.jsx";
 
 const Hotels = () => {
     return (
@@ -17,7 +17,7 @@ const Hotels = () => {
                     {Object.values(HotelsData).map((hotel, i) => (
                         <div className="trip-card" key={i}>
                             <div className="trip-card-image-wrapper">
-                                <img src={hotel.image} alt={hotel.name} className="trip-card-image" />
+                                <img src={hotel.image} alt={hotel.name} className="trip-card-image" loading="lazy" />
                             </div>
                             <div className="trip-card-content">
                                 <h3 className="trip-card-title">{hotel.name}</h3>
