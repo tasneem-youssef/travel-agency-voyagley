@@ -1,5 +1,6 @@
 import "../../index.css";
 import { FaMapMarkerAlt, FaClock, FaUsers, FaStar, FaTicketAlt } from "react-icons/fa";
+import ReservationButton from "../ReservationButton";
 
 const ActivityDetailContent = ({ activity }) => {
     if (!activity) return null;
@@ -107,12 +108,13 @@ const ActivityDetailContent = ({ activity }) => {
                         </div>
 
                         {/* Booking CTA */}
-                        <button
-                            className="trip-reserve-btn"
-                            id={`book-${activity.title.toLowerCase().replace(/\s/g, "-")}`}
-                        >
-                            Reserve Your Spot
-                        </button>
+                        <ReservationButton
+                            name={activity.title}
+                            date=""
+                            buttonLabel="Reserve Your Spot"
+                            noteText="Free cancellation up to 24 hours before the activity"
+                            buttonId={`book-${activity.title.toLowerCase().replace(/\s/g, "-")}`}
+                        />
 
                         <p className="trip-reserve-note">
                             Free cancellation up to 24 hours before the activity

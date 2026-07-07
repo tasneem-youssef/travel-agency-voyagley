@@ -1,5 +1,6 @@
 import "../../index.css";
 import { FaStar, FaMapMarkerAlt, FaConciergeBell, FaWifi, FaSwimmingPool } from "react-icons/fa";
+import ReservationButton from "../ReservationButton";
 
 const HotelDetailContent = ({ hotel }) => {
     if (!hotel) return null;
@@ -102,11 +103,13 @@ const HotelDetailContent = ({ hotel }) => {
                         </div>
 
                         {/* Booking CTA */}
-                        <button
-                            className="trip-reserve-btn"
-                        >
-                            Book Now
-                        </button>
+                        <ReservationButton
+                            name={hotel.name}
+                            date=""
+                            buttonLabel="Book Now"
+                            noteText="Free cancellation within 48 hours of booking"
+                            buttonId={`book-${hotel.name.toLowerCase().replace(/\s/g, "-")}`}
+                        />
 
                         <p className="trip-reserve-note">
                             Free cancellation within 48 hours of booking

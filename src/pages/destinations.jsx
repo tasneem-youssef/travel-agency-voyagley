@@ -17,13 +17,13 @@ const Destinations = () => {
                     {Object.values(DestinationsData).map((destination, i) => (
                         <div className="trip-card" key={i}>
                             <div className="trip-card-image-wrapper">
-                                <img src={destination.image} alt={destination.title} className="trip-card-image" />
+                                <img src={destination.image} alt={destination.name} className="trip-card-image" />
                             </div>
                             <div className="trip-card-content">
-                                <span className="trip-card-subtitle">{destination.subtitle}</span>
-                                <h3 className="trip-card-title">{destination.title}</h3>
+                                <span className="trip-card-subtitle">{destination.region}</span>
+                                <h3 className="trip-card-title">{destination.name}</h3>
                                 <div className="trip-card-footer">
-                                    <span className="trip-card-price">{destination.price}</span>
+                                    <span className="trip-card-price">{destination.startingPrice}</span>
                                     <Link className="trip-card-link" to={`/destinations/destination${i + 1}`}>
                                         View Destination
                                     </Link>

@@ -1276,6 +1276,92 @@ h2 {
   line-height: 1.5;
 }
 
+/* ============================================
+   RESERVATION MODAL
+   ============================================ */
+
+.res-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.res-modal-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--turkishJade), var(--lagoon));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(39, 134, 137, 0.3);
+}
+
+.res-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.res-form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.res-form-label {
+  display: flex !important;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--happy-cement) !important;
+}
+
+.res-label-icon {
+  color: var(--turkishJade);
+  font-size: 0.85rem;
+}
+
+.res-input-readonly input {
+  cursor: default !important;
+  user-select: none;
+}
+
+/* Success state */
+.res-modal-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 0 8px;
+}
+
+.res-modal-success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--turkishJade), var(--lagoon));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  box-shadow: 0 8px 24px rgba(39, 134, 137, 0.35);
+  animation: res-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes res-pop {
+  0% { transform: scale(0.4); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
 /* Responsive — stack on tablet */
 @media (max-width: 900px) {
   .trip-detail-grid {

@@ -1,5 +1,6 @@
 import "../../index.css";
 import { FaMapMarkerAlt, FaGlobe, FaSun, FaCamera, FaPlane } from "react-icons/fa";
+import ReservationButton from "../ReservationButton";
 
 const DestinationDetailContent = ({ destination }) => {
     if (!destination) return null;
@@ -102,12 +103,13 @@ const DestinationDetailContent = ({ destination }) => {
                         </div>
 
                         {/* Explore CTA */}
-                        <button
-                            className="trip-reserve-btn"
-                            id={`explore-${destination.name.toLowerCase().replace(/\s/g, "-")}`}
-                        >
-                            Explore Packages
-                        </button>
+                        <ReservationButton
+                            name={destination.name}
+                            date=""
+                            buttonLabel="Explore Packages"
+                            noteText="Customisable itineraries available for all budgets"
+                            buttonId={`explore-${destination.name.toLowerCase().replace(/\s/g, "-")}`}
+                        />
 
                         <p className="trip-reserve-note">
                             Customisable itineraries available for all budgets
