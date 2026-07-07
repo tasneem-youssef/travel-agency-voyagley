@@ -74,12 +74,6 @@ h2 {
   transition: all 0.3s ease-in-out;
 }
 
-.header-scrolled {
-  -webkit-backdrop-filter: blur(6px) saturate(200%);
-  backdrop-filter: blur(6px) saturate(200%);
-  background-color: rgba(39, 134, 137, 0.6);
-}
-
 .zain-black {
   font-family: "Zain", sans-serif;
   font-weight: 900;
@@ -1358,8 +1352,15 @@ h2 {
 }
 
 @keyframes res-pop {
-  0% { transform: scale(0.4); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 /* Responsive — stack on tablet */

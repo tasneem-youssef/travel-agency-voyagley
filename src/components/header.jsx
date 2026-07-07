@@ -10,19 +10,20 @@ import { SlMenu } from "react-icons/sl";
 import List from "@mui/joy/List";
 import ListItemButton from "@mui/joy/ListItemButton";
 const Header = () => {
-  /*getting scroll height*/
-  const [scrollHeight, setScrollHeight] = useState(0);
-  useEffect(() => {
-    const getHeight = () => {
-      const height = window.scrollY;
-      setScrollHeight(height);
-    };
-    getHeight();
-    window.addEventListener("scroll", getHeight);
-    return () => {
-      window.removeEventListener("scroll", getHeight);
-    };
-  }, []);
+  window.addEventListener('scroll', () => {
+    var header = document.getElementById('header')
+    var scrollPosition = document.documentElement.scrollTop
+    if (scrollPosition > 0) {
+      header.style.backgroundColor = 'rgba(39, 134, 137, 0.7)'
+      header.style.backdropFilter = ` blur(6px) saturate(200%)`
+    } else {
+      header.style.backgroundColor = 'transparent'
+      header.style.backdropFilter = ` none`
+      header.style.borderRadius = ' none'
+      header.style.border = ' none'
+    }
+  })
+
 
   /*getting window width for responsive design*/
   const [winwidth, setWinwidth] = useState(window.innerWidth);
@@ -31,7 +32,7 @@ const Header = () => {
   }, []);
   const [open, setOpen] = useState(false);
   return (
-    <div className={`Header ${scrollHeight >= 960 ? "header-scrolled" : ""} `}>
+    <div className={`Header`} id="header">
       <a href="/" className="logo zain-black">
         Voyagley
       </a>
